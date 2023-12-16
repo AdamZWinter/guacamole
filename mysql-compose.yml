@@ -1,0 +1,25 @@
+version: "3"
+
+# networks
+# create a network 'guacnetwork_compose' in mode 'bridged'
+networks:
+  guacnetwork_compose:
+    driver: bridge
+
+services:
+  mysql:
+    container_name: "mysql_container_name"
+    image: "mysql"
+    restart: unless-stopped
+    volumes: 
+      - database-volume:/var/lib/mysql
+      - .:/hostvolume
+    env_file:
+      - variables.env
+#    ports:
+#      - '3306:3306'
+    networks:
+      guacnetwork_compose:
+
+volumes:
+  database-volume:

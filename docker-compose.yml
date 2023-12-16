@@ -1,0 +1,62 @@
+version: '2.0'
+
+# networks
+# create a network 'guacnetwork_compose' in mode 'bridged'
+networks:
+  guacnetwork_compose:
+    driver: bridge
+
+services:
+  guacd:
+    container_name: "guacd_container_name"
+    image: "guacamole/guacd"
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    links:
+      - mysql
+    env_file:
+      - variables.env
+    networks:
+      guacnetwork_compose:
+
+
+  mysql:
+    container_name: "mysql_container_name"
+    image: "mysql"
+    restart: unless-stopped
+    volumes: 
+      - database-volume:/var/lib/mysql
+      - .:/hostvolume
+    env_file:
+      - variables.env
+#    ports:
+#      - '3306:3306'
+    networks:
+      guacnetwork_compose:
+
+
+  guacamole:
+    container_name: "guacamole_container_name"
+    image: "guacamole/guacamole"
+    restart: unless-stopped
+    depends_on:
+    - guacd
+    - mysql
+    env_file:
+      - variables.env
+    links:
+    - guacd
+    - mysql
+    networks:
+      guacnetwork_compose:
+    ports:
+      - '80:8080'
+##    ports:
+## enable next line if not using nginx
+##    - 8080:8080/tcp # Guacamole is on :8080/guacamole, not /.
+## enable next line when using nginx
+##    - 8080/tcp
+
+volumes:
+  database-volume:

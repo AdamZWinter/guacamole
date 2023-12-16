@@ -1,0 +1,116 @@
+    1  sudo apt update
+    2  sudo apt-get update
+    3  sudo apt install docker-ce docker-ce-cli containerd.io
+    4  sudo apt install docker
+    5  which docker
+    6  docker -v
+    7  sudo apt-get install -y docker.oi
+    8  sudo apt install -y docker.oi
+    9  sudo apt-get install -y docker
+   10  sudo docker start
+   11  sudo systemctl start docker
+   12  docker --version
+   13  sudo apt  install docker.io
+   14  sudo systemctl start docker
+   15  sudo systemctl enable docker
+   16  docker ps
+   17  sudo docker ps
+   18  sudo docker run -d -p 80:80 httpd
+   19  docker ps
+   20  sudo docker ps
+   21  curl localhost
+   22  sudo ufw status
+   23  sudo docker ps
+   24  history
+   25  docker ps
+   26  sudo docker ps
+   27  sudo docker stop pensive
+   28  sudo docker stop pensive_hypatioa
+   29  sudo docker stop pensive_hypatia
+   30  sudo docker run --help
+   31  clear
+   32  sudo docker run -d -p 80:80 --name apache httpd
+   33  cd /var/www/http
+   34  sudo docker ps
+   35  sudo docker exec -it apache /bin/bash
+   36  sudo docker ps
+   37  sudo apt install -y gcc vim curl wget g++ libcairo2-dev libjpeg-turbo8-dev libpng-dev libtool-bin libossp-uuid-dev libavcodec-dev libavutil-dev libswscale-dev build-essential libpango1.0-dev libssh2-1-dev libvncserver-dev libtelnet-dev freerdp2-dev libwebsockets-dev libssl-dev libvorbis-dev libwebp-dev tomcat9 tomcat9-admin tomcat9-user
+   38  sudo docker ps
+   39  sudo docker stop apache
+   40  docker run --name guacd -d guacamole/guacd
+   41  sudo docker run --name guacd -d guacamole/guacd
+   42  sudo docker ps
+   43  docker run --name guacamole     --link guacd:guacd            -d -p 80:80 guacamole/guacamole
+   44  sudo docker run --name guacamole     --link guacd:guacd            -d -p 80:80 guacamole/guacamole
+   45  sudo docker ps
+   46  sudo docker run --name guacamole     --link guacd:guacd            -it -p 80:80 guacamole/guacamole
+   47  sudo docker ps
+   48  sudo docker run --name guacamole     --link guacd:guacd            -it -p 80:80 1eb85f2c93718bf4c40c0242b8aeb
+   49  sudo docker run --name guacamole     --link guacd:guacd            -it -p 80:80 guacamole
+   50  sudo docker run --name guacamole     --link guacd:guacd            -it -p 80:80 guacamole/guacamole
+   51  sudo docker container rm 1eb85f2c93718bf4c
+   52  sudo docker run --name guacamole     --link guacd:guacd            -it -p 80:80 guacamole/guacamole
+   53  sudo docker ps
+   54  sudo docker stop guacd
+   55  ls
+   56  touch variables.env
+   57  vim variables.env 
+   58  docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --mysql > initdb.sql
+   59  sudo docker run --rm guacamole/guacamole /opt/guacamole/bin/initdb.sh --mysql > initdb.sql
+   60  ls
+   61  cat initdb.sql 
+   62  sudo apt install docker-compose
+   63  sudo apt-get install screen
+   64  clear
+   65  ls
+   66  touch docker-compose.yml
+   67  vim docker-compose.yml 
+   68  git --version
+   69  wget https://raw.githubusercontent.com/AdamZWinter/TopSecondHost/container/docker-compose.yml
+   70  ls
+   71  rm docker-compose.yml
+   72  mv docker-compose.yml.1 docker-compose.yml
+   73  ls
+   74  vim docker-compose.yml 
+   75  touch mysql-compose.yml
+   76  docker-compose --help
+   77  ls
+   78  screen -S one
+   79  history
+   80  ls
+   81  cat docker-compose.yml 
+   82  ls
+   83  ca initdb.sql 
+   84  cat initdb.sql 
+   85  ls
+   86  cat mysqlinit.sh 
+   87  cat variables.env 
+   88  cp variables.env variables.env.template
+   89  vim variables.env.template 
+   90  ls
+   91  mkdir guacamole
+   92  mv * guacamole/
+   93  ls
+   94  cd guacamole/
+   95  ls
+   96  mv variables.env ..
+   97  ls
+   98  git --version
+   99  git config --global init.defaultBranch main
+  100  git config --global user.name "........."
+  101  git config --global user.email .........
+  102  git config --global color.ui auto
+  103  git config credential.helper store
+  104  git init
+  105  git config credential.helper store
+  106  git config pull.rebase false
+  107  git remote add origin https://github.com/AdamZWinter/guacamole.git
+  108  git branch
+  109  git branch -M main
+  110  git status
+  111  git add .
+  112  git commit -m "first commit"
+  113  git branch -M main
+  114  git push -u origin main
+  115  history
+  116  history >> history.txt
